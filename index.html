@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eid agaye or mera yar</title>
+</head>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
+
+
+<style>
+*{
+    margin: 0px;
+    padding : 0px;
+    box-sizing: border-box;
+
+  font-weight: 800;
+  transition: 0.5s ease;
+  
+  
+}
+body{
+    width: 100%;
+    height: 96vh;
+    background-color:rgb(0, 105, 105);
+    display: flex;
+    flex-direction: column;
+    margin: 2vh 0%;
+    font-family: 'Poppins', sans-serif;
+    display: ;
+}
+section{
+   margin: 0px 5%;
+   text-transform: uppercase;
+   
+}
+section h4{
+    color: white;
+    font-size: 7px;
+    line-height: 1.1;
+    text-transform: capitalize;
+
+}
+section h4 .owner{
+    color: rgb(255, 115, 115);
+    font-size: 9px;
+}
+section #firecracker1-1{
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    width: 120px;
+    height: 120px;
+    animation: firecracker1 5s infinite ;
+    opacity: 0.6;
+    z-index: -5;
+}
+section #firecracker1-2{
+    position: absolute;
+    top: 50%;
+    right: 2%;
+    width: 120px;
+    height: 120px;
+    animation: firecracker1 5s infinite ;
+    opacity: 0.6;
+    z-index: -5;
+    
+}
+section #firecracker1-3{
+    position: absolute;
+    top: 15%;
+    left: 20%;
+    width: 120px;
+    height: 120px;
+    animation: firecracker1 5s infinite ;
+    opacity: 0.6;
+    z-index: -5;
+}
+
+
+section #firecracker3-1{
+    position: absolute;
+    top: 0%;
+    left: 2%;
+    width: 120px;
+    height: 120px;
+    animation: firecracker3 3s infinite;
+}
+section #firecracker3-2{
+    position: absolute;
+    top: 30%;
+    left: 25%;
+    width: 120px;
+    height: 120px;
+    animation: firecracker3 3s infinite;
+   
+    
+}
+section #firecracker3-3{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    width: 120px;
+    height: 120px;
+    animation: firecracker3 3s infinite;
+     
+   
+}
+section #firecracker4{
+    position: absolute;
+    top: 27%;
+    right: 10%;
+    width: 120px;
+    height: 120px;
+    animation: firecracker3 3s 1s infinite;
+}
+section .firecracker5-1{
+    position: absolute;
+  
+   top: 10%;
+   right: 15%;
+   opacity: 0.5;
+   z-index: -333;
+
+    width: 100px;
+    height: 100px;
+    animation: firecracker5 3s 1s infinite;
+
+}
+section .firecracker5-2{
+    position: absolute;
+  
+   bottom: 2%;
+   left: 2%;
+   opacity: 0.5;
+   z-index: -333;
+
+    width: 100px;
+    height: 100px;
+    animation: firecracker5 3s 1s infinite;
+
+}
+section .firecracker5-3{
+    position: absolute;
+  
+   bottom: 40%;
+   left: 2%;
+   opacity: 0.5;
+   z-index: -333;
+
+    width: 100px;
+    height: 100px;
+    animation: firecracker5 3s 1s infinite;
+
+}
+
+.section-2{
+    text-align: center;
+    font-family: 'Noto Nastaliq Urdu', serif;
+    font-size: 12px;
+    color :rgb(243, 255, 69);
+}
+.section-2 .specific{
+    color: rgb(255, 0, 212);
+}
+
+section .name_puter{
+    color: rgb(252, 158, 135);
+    font-size: 22px;
+    line-height: 1;
+    text-align: center;
+    margin-top: 4px;
+    
+}
+section .name_puter span{
+    color:rgb(252, 255, 83);
+}
+section .name_puter img{
+    width:200px;
+    height: 200px;
+}
+section .maker{
+    color: rgb(104, 255, 74);
+    font-size: 13px;
+}
+section button{
+    padding: 10px 14px;
+    background-color: rgb(240, 163, 128);
+    color:rgb(73, 26, 26);
+    border-radius: 8px;
+    font-size: 22px;
+    
+}
+section button:hover{
+    background: rgb(163, 109, 84);
+    color :rgb(192, 192, 192);
+}
+#eid1{
+    width :200px;
+    position: absolute;
+    top: 0;
+    left:0;
+    opacity: 0.5;
+    z-index: -4;
+    animation: eid1 3s infinite alternate ;
+}
+
+#eid2  {
+    
+    height: 200px;
+    background: radial-gradient(circle at 60% 40%);
+    width: 250px;
+    animation: glow 2s infinite alternate;
+}
+.section-3{
+    text-align: center;
+}
+@keyframes eid1 {
+    from{
+transform: translateY(0px);
+    }
+    to{
+  transform: translateY(20px);
+    }
+}
+@keyframes glow {
+    from {
+        transform: rotate(-10deg);
+    }
+    to {
+      
+        transform: rotate(10deg);
+    }
+}
+
+@keyframes firecracker1{
+    from{
+        transform: scale(0.2);
+    }
+    to{
+        transform: scale(1);
+    }
+
+}@keyframes firecracker3{
+    from{
+        transform: scale(0.2);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+@keyframes firecracker4{
+    from{
+        transform: scale(0.3);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+@keyframes firecracker5{
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+ 
+
+/* second page */
+#button-page{
+    width: 300px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    background-color: darkblue;
+    padding: 20px;
+    border-radius: 8px;
+    /* display: none; */
+    position: absolute;
+    margin: 0 auto;
+    right: 10%;
+    left: 10%;
+    visibility: hidden;
+    
+}
+#button-page input{
+    border-radius: 12px;
+    padding: 5px;
+    font-size: 20px;
+  
+}
+#button-page button{
+    cursor: pointer;
+}
+
+
+
+
+
+
+</style>
+<body>
+    <section id="section-1">
+        <h4>This Eid website was created for <span class="owner">"Mujeeb-ur-Rehman"</span>. It has been purchased, but if you would like to use it, click the button below.</h4>
+    <img  class="firecracker1" id="firecracker1-1" src="./firecracker1.png" alt="">
+    <img  class="firecracker1" id="firecracker1-2" src="./firecracker1.png" alt="">
+    <img  class="firecracker1" id="firecracker1-3" src="./firecracker1.png" alt="">
+    <img class="firecackerclass3" id="firecracker3-1" src="./firecracker3.png" alt="">
+    <img  class="firecackerclass3" id="firecracker3-2" src="./firecracker3.png" alt="">
+    <img class="firecackerclass3" id="firecracker3-3" src="./firecracker3.png" alt="">
+    <img id="firecracker4" src="./firecracker3.png" alt="">
+    <img id="firecracker5" class="firecracker5-1" src="./firecracker5.png" alt="">
+    <img id="firecracker5" class="firecracker5-2" src="./firecracker5.png" alt="">
+    <img id="firecracker5" class="firecracker5-3" src="./firecracker5.png" alt="">
+   
+
+    </section>
+
+    <section class="section-2">
+        <p class="name_puter">Eid Mubarak from <span class="putname">"Mujeeb"</span> and <span class="putname">"Mujeeb</span>'s Family"!</p>
+        <img id="eid1" src="./eid1.png" alt="">
+        <img  id="eid2"src="./eid2.png" alt="">
+        <p class="hadith"> تقبل الله منا ومنكم <br> <strong class="specific">ترجمعہ: </strong>"اللہ ہم سے اور آپ سے (یہ عبادت) قبول فرمائے۔" (فتح الباری، شرح صحیح البخاری، ابن حجر عسقلانی، 2/446)</p>
+        <hr>
+        <p> اللَّهُ أَكْبَرُ اللَّهُ أَكْبَرُ، لَا إِلَهَ إِلَّا اللَّهُ، وَاللَّهُ أَكْبَرُ، اللَّهُ أَكْبَرُ وَلِلَّهِ الْحَمْدُ</p>
+        <p> <strong class="specific">ترجمہ:</strong> اللہ سب سے بڑا ہے، اللہ سب سے بڑا ہے، اللہ کے سوا کوئی معبود نہیں، اور اللہ سب سے بڑا ہے، اللہ سب سے بڑا ہے اور تمام تعریفیں اللہ کے لیے ہیں۔</p>
+        
+
+    </section>
+
+    <section class="section-3">
+        <p class="maker">If you want to create this, click the button below.</p>
+        <button id="clickHere">Create Now</button>
+        
+
+    </section>
+
+    <section id="button-page">
+       
+            
+            
+            
+            <input id="get-name" type="text" onchange="getvalue(event)" placeholder="Enter your name">
+            
+      
+     <button id="Done">Done</button>
+    </section>
+    <script>
+        const clickHerebtn = document.getElementById('clickHere')
+        const Donebtn = document.getElementById('Done')
+        const buttonPage = document.getElementById('button-page')
+        const getNameInput = document.getElementById('get-name')
+        const putNameP = document.getElementsByClassName('putname')
+       
+        
+        clickHerebtn.addEventListener('click',()=>{
+        buttonPage.style.visibility='visible'
+        })
+        
+        Donebtn.addEventListener('click',()=>{
+            getNameInput.value = " "
+            buttonPage.style.visibility='hidden'
+        })
+ 
+        const getvalue = (event) => {
+        console.log(event.target.value)
+        // putNameP.innerText = event.target.value
+        Array.from(putNameP).forEach((putname)=>{
+            putname.innerText = event.target.value
+        })
+        
+        }
+
+    </script>
+</body>
+</html>
