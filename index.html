@@ -359,8 +359,20 @@ transform: translateY(0px);
         buttonPage.style.visibility='visible'
         })
         
+         const update = (name) =>{
+         Array.from(putNameP).forEach((passname)=>{
+            passname.innerText = name
+         })
+         }
         Donebtn.addEventListener('click',()=>{
-            getNameInput.value = " "
+            let username = getNameInput.value.trim() 
+            if(username){
+                let encoded = encodeURIComponent(username);
+                let newUrl = `${window.location.origin}${window.location.pathname}?name=${username}`
+                window.history.pushState({}, '', newUrl); 
+                update(username)
+            }
+            console.log(username)
             buttonPage.style.visibility='hidden'
         })
  
