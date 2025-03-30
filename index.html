@@ -371,61 +371,47 @@ transform: translateY(0px);
     </section>
     
     <script>
-        const copybtn = document.querySelector('.copy')
-        const pastecopyinp = document.querySelector('.copypaste')
-        const clickHerebtn = document.getElementById('clickHere')
-        const Donebtn = document.getElementById('Done')
-        const buttonPage = document.getElementById('button-page')
-        const getNameInput = document.getElementById('get-name')
-        const putNameP = document.getElementsByClassName('putname')
+        const copyBtn = document.querySelector('.copy');
+const pasteCopyInp = document.querySelector('.copypaste');
+const clickHereBtn = document.getElementById('clickHere');
+const doneBtn = document.getElementById('Done');
+const buttonPage = document.getElementById('button-page');
+const getNameInput = document.getElementById('get-name');
+const putNameP = document.querySelectorAll('.putname');  
+clickHereBtn.addEventListener('click', () => {
+    buttonPage.style.visibility = 'visible';
+});
+
+
+
+doneBtn.addEventListener('click', () => {
+    let username = getNameInput.value.trim();
+    if (username) {
+        let encoded = encodeURIComponent(username);
+        let newUrl = `${window.location.origin}${window.location.pathname}?name=${encoded}`;
+        pasteCopyInp.value = newUrl;
        
-        
-        clickHerebtn.addEventListener('click',()=>{
-        buttonPage.style.visibility='visible'
-        })
-        
-         const update = (name) =>{
-         Array.from(putNameP).forEach((passname)=>{
-            passname.innerText = name
+    }
+});
 
-         })
-         }
-        Donebtn.addEventListener('click',()=>{
-            let username = getNameInput.value.trim() 
-            if(username){
-                let encoded = encodeURIComponent(username);
-                let newUrl = `${window.location.origin}${window.location.pathname}?name=${username}`
-                // window.history.pushState({}, '', newUrl); 
-                // update(username)
-                pastecopyinp.value = newUrl
-            }
-        })
- 
-        const getvalue = (event) => {
-        console.log(event.target.value)
-        // putNameP.innerText = event.target.value
-        Array.from(putNameP).forEach((putname)=>{
-            putname.innerText = event.target.value
-        })
-        
-        }
-        copybtn.addEventListener('click',()=>{
-         pastecopyinp.select()
-         navigator.clipboard.writeText(pastecopyinp.value);
+copyBtn.addEventListener('click', () => {
+    pasteCopyInp.select();
+    navigator.clipboard.writeText(pasteCopyInp.value);
+    copyBtn.innerText = 'Copied!';
 
-         copybtn.innerText = 'coppied!'
+    setTimeout(() => {
+        copyBtn.innerText = 'Copy';
+    }, 2000);
+    buttonPage.style.visibility='hidden'
+});
 
-         setTimeout(() => {
-            copybtn.innerText= 'copy'
-         }, 2000);
-         buttonPage.style.visibility='hidden'
-        })
-        window.onload = function() {
+window.onload = function () {
     const urlParams = new URLSearchParams(window.location.search);
     const nameFromUrl = urlParams.get("name");
-    
+
     if (nameFromUrl) {
-        update(decodeURIComponent(nameFromUrl)); // Update the name on the page
+        document.querySelectorAll('.putname').forEach((putname)=>{putname.innerText = decodeURIComponent(nameFromUrl)})
+        
     }
 };
 
