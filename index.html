@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eid agaye or mera yar</title>
-   
-
 </head>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
@@ -406,13 +404,6 @@ transform: translateY(0px);
 
     </section>
 
-    <section>
-        <audio  id="myaudio "src="" autoplay>
-            <source src="" type="audio/mpeg">
-        </audio>
-    </section>
-
-
     <section class="section-2">
         <p class="name_puter">Eid Mubarak from <span class="putname">"Mujeeb"</span> and <span class="putname">"Mujeeb</span>'s Family"!</p>
         <img id="eid1" src="eid1.png" alt="">
@@ -447,9 +438,7 @@ transform: translateY(0px);
             <button id="Done">Done</button>
     </section>
     
-    <script type="module">
-
-
+    <script>
         const copyBtn = document.querySelector('.copy');
 const pasteCopyInp = document.querySelector('.copypaste');
 const clickHereBtn = document.getElementById('clickHere');
@@ -457,7 +446,6 @@ const doneBtn = document.getElementById('Done');
 const buttonPage = document.getElementById('button-page');
 const getNameInput = document.getElementById('get-name');
 const putNameP = document.querySelectorAll('.putname');  
-const myaudio = document.getElementById('myaudio')
 clickHereBtn.addEventListener('click', () => {
     buttonPage.style.visibility = 'visible';
 });
@@ -489,7 +477,6 @@ copyBtn.addEventListener('click', () => {
 });
 
 window.onload = function () {
-    myaudio.play().catch((error)=>{console.log("Autoplay block :",error)})
     const urlParams = new URLSearchParams(window.location.search);
     const nameFromUrl = urlParams.get("name");
 
@@ -497,7 +484,6 @@ window.onload = function () {
         document.querySelectorAll('.putname').forEach((putname)=>{putname.innerText = decodeURIComponent(nameFromUrl)})
         
     }
-
 };
 
 
